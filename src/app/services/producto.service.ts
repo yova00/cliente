@@ -15,5 +15,12 @@ export class ProductoService {
     return this.http.get(this.url);
   }
 
+  eliminarProducto(id: string): Observable<any> {
+    return this.http.delete(this.url + id);
+  }
+
+  guardarProducto(producto: any): Observable<any> {
+    return this.http.post(this.url, producto);
+  }
 
 }
