@@ -24,9 +24,9 @@
                         <td>{{producto.nombre}}</td>
                         <td>{{producto.categoria}}</td>
                         <td>{{producto.ubicacion}}</td>
-                        <td>{{producto.precio | currency:'USD'}}</td>
+                        <td>{{producto.precio | currency:'CLP '}}</td>
                         <td>
-                            <i class="fas fa-pencil text-primary" ></i>
+                            <i [routerLink]="['/editar-producto', producto._id]" class="fas fa-pencil text-primary" ></i>
                             <i (click)="eliminarProducto(producto._id)" class="fas fa-trash text-danger" style="margin-left: 20px;"></i>
                         </td>
                     </tr>
